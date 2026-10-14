@@ -1,0 +1,43 @@
+{
+  "name": "crab-crew",
+  "version": "0.1.0",
+  "description": "Follow your subagents at a glance: a status strip over the input box and a /crew panel where every subagent is a costumed pixel crab, with its model, steps, context, cost and runtime.",
+  "author": {
+    "name": "Allar Kalina"
+  },
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "autoOpen": {
+      "type": "string",
+      "title": "Crew panel auto-open",
+      "description": "session: open once per session, at the first subagent or plan; flow: open at every new flow; off: open only with /crew or the strip's count",
+      "default": "session",
+      "options": [
+        "session",
+        "flow",
+        "off"
+      ]
+    },
+    "stepReports": {
+      "type": "string",
+      "title": "Step reports from subagents",
+      "description": "on: built-in subagent briefs get one extra line asking for step calls, which drive their bars; off: briefs stay as written and bars show context use",
+      "default": "on",
+      "options": [
+        "on",
+        "off"
+      ]
+    },
+    "glyphs": {
+      "type": "string",
+      "title": "Glyph set",
+      "description": "nerd: Nerd Font pill caps and chevrons plus an octant crab on the strip; plain: half blocks, triangles and an ASCII crab for fonts lacking those",
+      "default": "nerd",
+      "options": [
+        "nerd",
+        "plain"
+      ]
+    }
+  },
+  "license": "MIT"
+}
